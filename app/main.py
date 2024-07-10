@@ -32,7 +32,7 @@ def get_response(request, encoding):
             path = path[6:]
             response = f"HTTP/1.1 200 OK \r\nContent-Type: text/plain \r\nContent-Length: {len(path)}\r\n\n{path}\r\n\r\n"
         elif path == "/":
-            response = f"HTTP/1.1 200 OK \r\n\r\n"
+            response = "HTTP/1.1 200 OK \r\n\r\n"
         elif path == "/user-agent":
             response = f"HTTP/1.1 200 OK \r\nContent-Type: text/plain \r\nContent-Length:{len(user_agent)}\r\n\n{user_agent}\r\n\r\n"
         elif path.startswith("/files/"):
